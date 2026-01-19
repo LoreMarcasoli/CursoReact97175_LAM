@@ -1,0 +1,14 @@
+.titulo-h2 {
+    background-color: darkcyan;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.titulo-logo {
+    width: 20%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
