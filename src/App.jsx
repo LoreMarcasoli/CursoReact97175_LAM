@@ -1,15 +1,20 @@
 import './App.css'
-import Titulo from './Components/Titulo/Titulo.jsx'
+import Navbar from './Components/NavBar/NavBar.jsx'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer.jsx'
+
 
 function App() {
+
+  const bienvenido = () => {
+    alert("Hola en que podemos ayudarlo" );
+  }
 
 
   return (
     <div>
-      <h1>Hola Mundo nuevamente</h1>
-      <Titulo />
-      <Titulo />
-      <Titulo />
+      <Navbar />
+      <ItemListContainer bienvenida={"Bienvenidos a Bienes Raices Diqmar"} despedida={"Gracias por visitarnos"} bienvenido={bienvenido} />
+
     </div>
 
   )

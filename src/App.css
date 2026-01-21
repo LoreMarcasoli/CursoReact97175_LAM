@@ -1,0 +1,58 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation bar styles */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  width: 100%;
+}
+
+/* Brand/Logo container */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Pushes other elements to the right */
+}
+
+/* Logo styles */
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  margin-left: 0; /* Ensures logo stays at the leftmost position */
+}
+
+/* Navigation menu styles */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav li:hover {
+  background-color: #e9ecef;
+}
+
+/* App container */
+.app {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
