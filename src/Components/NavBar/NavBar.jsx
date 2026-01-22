@@ -1,4 +1,4 @@
-import cartWidget from '../CartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import logo from "../../img/Logo_nuevo.PNG"
 
 const Navbar = () => {   
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <li>Contacto</li>
             </ul>
 
-           
+           <CartWidget />
 
         </nav>
     );

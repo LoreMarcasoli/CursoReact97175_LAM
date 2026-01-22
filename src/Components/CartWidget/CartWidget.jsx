@@ -1,5 +1,4 @@
-//import {LuShoppingCart} from 'react-icons/lu';
-import { LuHome, LuUser } from "react-icons/lu";
+import {LuShoppingCart} from 'react-icons/lu';
 
 const CartWidget= () => {   
 
