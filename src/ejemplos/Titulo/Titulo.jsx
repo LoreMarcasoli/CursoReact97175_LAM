@@ -1,6 +1,6 @@
 import "./titulo.css";
 //import banner from "../../img/banner.jpg";
-import banner from "../../img/react-banner.jpg";
+import banner from "../../../public/image/react-banner.png";
 
 const Titulo = () => {
 

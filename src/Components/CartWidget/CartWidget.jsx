@@ -1,5 +1,5 @@
 import {LuShoppingCart} from 'react-icons/lu';
-//import "./cartwidget.css";
+import "./cartwidget.css";
 
 const CartWidget= () => {   
 
