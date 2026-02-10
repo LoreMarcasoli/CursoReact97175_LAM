@@ -2,6 +2,9 @@ import './App.css'
 import Navbar from './Components/NavBar/NavBar.jsx'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer.jsx'
 import ContadorContainer from './ejemplos/ContadorContainer.jsx'
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer.jsx'
+import { BrowserRouter,Routes, Route } from 'react-router'
+
 
 function App() {
 
@@ -11,11 +14,17 @@ function App() {
 
 
   return (
-    <div>
+    <BrowserRouter>
+
       <Navbar />
-      <ItemListContainer bienvenida={"Bienvenidos a Bienes Raices Diqmar"} despedida={"Gracias por visitarnos"} bienvenido={bienvenido} />
-      <ContadorContainer />
-    </div>
+      <Routes>
+        <Route path='/' element={<ItemListContainer bienvenida={"Bienvenidos a la inmobiliaria!"} despedida={"Gracias por su visita!"} bienvenido={bienvenido}/>} />
+        <Route path='/category/:id' element={<ItemListContainer bienvenida={"Bienvenidos a la inmobiliaria!"} despedida={"Gracias por su visita!"} bienvenido={bienvenido}/>} />
+
+      </Routes>
+
+      
+    </BrowserRouter>
 
   )
 }

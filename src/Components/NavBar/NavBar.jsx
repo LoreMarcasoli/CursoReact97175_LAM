@@ -1,20 +1,22 @@
 import CartWidget from '../CartWidget/CartWidget';
 import logo from "../../../public/image/Logo_nuevo.PNG";
+import {Link,NavLink} from "react-router";
+import "./navbar.css";
 
 const Navbar = () => {   
     return (
-        <nav className='nav'>
+        <nav className='navbar'>
             
-            <div className='nav-brand'>   
+            <NavLink to="/">   
                 <img className="logo" src={logo}  alt="Brand Logo" />
-            </div>
+            </NavLink>
             
-            <ul>
-                <li>Home</li>
-                <li>Comprar</li>
-                <li>Vender</li>
-                <li>Alquilar</li>
-                <li>Contacto</li>
+            <ul className='categories'>
+                <NavLink to="/category/Compra" className='category'>Compra</NavLink>
+                <NavLink to="/category/Vende" className='category'>Vende</NavLink>
+                <NavLink to="/category/Alquila" className='category'>Alquila</NavLink>
+                <NavLink to="/category/Contacto" className='category'>Contacto</NavLink>
+
             </ul>
 
            <CartWidget />
