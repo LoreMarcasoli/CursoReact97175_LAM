@@ -1,6 +1,7 @@
 import { getProducts  } from "../../data/data.js";
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
+import {useParams} from "react-router";
 //borrar despues
 //import { getProducts,getProductById,addProduct, deleteProductById,setproductbyid } from "../../data/api.js";
 
@@ -8,15 +9,26 @@ const ItemListContainer = ({bienvenida,despedida,bienvenido}) => {
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const {category} = useParams();
 
     useEffect(() => {
         
+        setLoading(true);
+
         getProducts()
-            .then((response)=>{setProducts(response);})
+            .then((response)=>{
+                if(category){
+                    const filteredProducts = response.filter( (product)=> 
+                     product.category === category)
+                    setProducts(filteredProducts);
+                }
+                else {
+                    setProducts(response);
+                }
+            })
             .catch((error)=>{console.log(error);})
             .finally(()=>{setLoading(false);})
-        
-    },[]);
+    },[category]);
 
     return (
            

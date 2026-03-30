@@ -1,3 +1,4 @@
+import {Link} from "react-router";
 import "./item.css";
 
 const Item = ({product}) => {   
@@ -12,7 +13,7 @@ const Item = ({product}) => {
                 <p className="title-item">{product.name}</p>
                 <p className="description-item">{product.category}</p>
                 <p className="price-item">U$S {product.precio}</p>
-                <div className="button-item"> MÁS INFORMACIÓN </div>
+                <Link to={`/detail/${product.id}`} className="button-item"> MÁS INFORMACIÓN </Link>
 
             </div>
         </li>

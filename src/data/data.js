@@ -7,7 +7,8 @@ import { ImAttachment } from "react-icons/im";
             descripcion :"Emprendimiento Prado Del Oeste ", 
             precio: 150000, 
             category:"Vende",
-            Image:"/image/Emprendimiento1.PNG"
+            Image:"/image/Emprendimiento1.PNG",
+            stock:3
         },
         {
             id:2, 
@@ -15,7 +16,8 @@ import { ImAttachment } from "react-icons/im";
             descripcion:"Emprendimiento Aires De Pilar", 
             precio: 200000, 
             category:"Vende",
-            Image:"/image/Emprendimiento2.PNG"
+            Image:"/image/Emprendimiento2.PNG",
+            stock:4
         },
         {
             id:3, 
@@ -23,7 +25,9 @@ import { ImAttachment } from "react-icons/im";
             descripcion:"Emprendimiento Costa Esmeralda", 
             precio: 120000, 
             category:"Vende",
-            Image:"/image/Emprendimiento3.PNG"
+            Image:"/image/Emprendimiento3.PNG",
+            stock:6
+        
         },
         {
             id:4, 
@@ -31,7 +35,8 @@ import { ImAttachment } from "react-icons/im";
             descripcion :"Emprendimiento Puertos", 
             precio: 250000, 
             category:"Vende",
-            Image:"/image/Emprendimiento4.PNG"
+            Image:"/image/Emprendimiento4.PNG",
+            stock:2
         },
         {
             id:5, 
@@ -39,7 +44,8 @@ import { ImAttachment } from "react-icons/im";
             descripcion:"Emprendimiento San Sebastian", 
             precio: 250000, 
             category:"Alquila",
-            Image:"/image/Emprendimiento5.PNG"
+            Image:"/image/Emprendimiento5.PNG",
+            stock:2
         },
         {
             id:6, 
@@ -47,7 +53,8 @@ import { ImAttachment } from "react-icons/im";
             descripcion:"Emprendimiento Altos DeMaschwitz", 
             precio: 250000, 
             category:"Alquila",
-            Image:"/image/Emprendimiento6.PNG"
+            Image:"/image/Emprendimiento6.PNG",
+            stock:1
         },
         {
             id:7, 
@@ -55,7 +62,8 @@ import { ImAttachment } from "react-icons/im";
             descripcion :"Emprendimiento Las Victorias", 
             precio: 250000, 
             category:"Alquila",
-            Image:"/image/Emprendimiento7.PNG"
+            Image:"/image/Emprendimiento7.PNG",
+            stock:4
         },
         {
             id:8, 
@@ -63,7 +71,8 @@ import { ImAttachment } from "react-icons/im";
             descripcion:"Emprendimiento Pride Canning", 
             precio: 250000, 
             category:"Alquila",
-            Image:"/image/Emprendimiento8.PNG"
+            Image:"/image/Emprendimiento8.PNG",
+            Stock:3
         },
         
     ];
@@ -83,7 +92,7 @@ import { ImAttachment } from "react-icons/im";
         export const getProductById = (productId) => {
         
         return new Promise((resolve,reject)=>{
-            const product = products.find((produdctData) => produdctData.id === productId);
+            const product = products.find((produdctData) => produdctData.id === Number(productId));
             setTimeout(() => {
                 if(product){
                     resolve(product);

@@ -7,24 +7,28 @@ import { useParams } from "react-router";
 const itemDetailContainer = () => {   
 
     const [product, setProduct] = useState({});
-    const {id} = useParams(); 
-
-    console.log("ID del producto obtenido de useParams:", id);
-
+    const{productid} = useParams();
+    const [loading, setLoading] = useState(true);
+    
     useEffect(() => {
-        getProductById(5)
+            setLoading(true);
+            getProductById(productid)
             .then((data) => {
-                console.log("Producto obtenido por ID Lore:", data);
                 setProduct(data);
             })
-            .catch((error) => {
-                console.error("Error al obtener el producto por ID:", error);
-            });
-    },[]);
+            .catch((error) => {console.error("Error al obtener el producto por ID:", error);})
+            .finally(()=>{setLoading(false);});
+    },[productid]);
 
     return (
          <div className="itemdetailcontainer">
-            <ItemDetail product={product}/>
+            
+          {
+            loading === true ? <div>Cargando...</div> : <ItemDetail product={product}/>
+          }
+
+
+
         </div>
     );
 };
